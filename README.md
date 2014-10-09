@@ -1,4 +1,4 @@
-docker-python
+docker-wheezy-python
 =============
 
 A python base.
