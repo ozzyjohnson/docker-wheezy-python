@@ -5,6 +5,9 @@ MAINTAINER Ozzy Johnson <ozzy.johnson@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
+# Set verions.
+ENV PYTHON_VERSION 2.7
+
 # Update and install minimal.
 RUN \
   apt-get update \
@@ -14,8 +17,8 @@ RUN \
             --no-install-recommends \
             --no-install-suggests \
           build-essential \
-          python \
-          python-dev \
+          python$PYTHON_VERSION \
+          python$PYTHON_VERSION-dev \
           python-pip && \
 
 # Clean up packages.
